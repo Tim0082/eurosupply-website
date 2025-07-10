@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EuroSupply</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-black text-white font-sans">
 
@@ -16,6 +16,7 @@
       <ul class="flex space-x-6">
         <li><a href="#about" class="hover:underline">À propos</a></li>
         <li><a href="#services" class="hover:underline">Services</a></li>
+        <li><a href="#collections" class="hover:underline">Collections</a></li>
         <li><a href="#contact" class="hover:underline">Contact</a></li>
       </ul>
     </nav>
@@ -25,6 +26,12 @@
   <section class="h-screen flex flex-col justify-center items-center text-center px-4">
     <h2 class="text-5xl md:text-7xl font-extrabold mb-4">Bienvenue chez EuroSupply</h2>
     <p class="text-lg md:text-xl text-gray-300">La référence en fourniture européenne</p>
+  </section>
+
+  <!-- SLOGAN -->
+  <section class="text-center py-12 px-4 bg-gray-900">
+    <h1 class="text-4xl font-bold mb-4">La référence en fourniture européenne</h1>
+    <p class="text-gray-400">Découvrez nos collections premium</p>
   </section>
 
   <!-- ABOUT -->
@@ -53,6 +60,45 @@
     </div>
   </section>
 
+  <!-- COLLECTIONS -->
+  <section id="collections" class="bg-purple-700 py-16 px-6">
+    <div class="max-w-6xl mx-auto text-white">
+      <h3 class="text-4xl font-bold mb-12">Collections</h3>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+        <!-- Bloc 1 -->
+        <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
+          <img src="img/produits_tech.png" alt="Produits Tech" class="w-full h-48 object-contain bg-black p-4" />
+          <div class="p-4 text-center text-white font-medium">Produits Tech →</div>
+        </a>
+
+        <!-- Bloc 2 -->
+        <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
+          <img src="img/telephones.png" alt="Téléphones" class="w-full h-48 object-contain bg-black p-4" />
+          <div class="p-4 text-center text-white font-medium">Téléphones →</div>
+        </a>
+
+        <!-- Bloc 3 -->
+        <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
+          <img src="img/vetements.png" alt="Vêtements" class="w-full h-48 object-contain bg-black p-4" />
+          <div class="p-4 text-center text-white font-medium">Vêtements →</div>
+        </a>
+
+        <!-- Bloc 4 -->
+        <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
+          <img src="img/sacs.png" alt="Sacs" class="w-full h-48 object-contain bg-black p-4" />
+          <div class="p-4 text-center text-white font-medium">Sacs →</div>
+        </a>
+
+        <!-- Bloc 5 -->
+        <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
+          <img src="img/parfums.png" alt="Parfums" class="w-full h-48 object-contain bg-black p-4" />
+          <div class="p-4 text-center text-white font-medium">Parfums →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="py-10 text-center text-gray-500 bg-gray-950">
     &copy; 2025 EuroSupply. Tous droits réservés.
@@ -60,44 +106,3 @@
 
 </body>
 </html>
-
-<!-- COLLECTIONS -->
-<section class="bg-purple-700 py-16 px-6">
-  <div class="max-w-6xl mx-auto text-white">
-    <h3 class="text-4xl font-bold mb-12">Collections</h3>
-
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-      <!-- Bloc 1 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="https://i.imgur.com/VqXEZ0F.png" alt="Produits Tech" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Produits Tech →</div>
-      </a>
-
-      <!-- Bloc 2 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="https://i.imgur.com/HQp0wUn.png" alt="Telephones" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Téléphones →</div>
-      </a>
-
-      <!-- Bloc 3 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="https://i.imgur.com/x7bs2wW.png" alt="Vêtements" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Vêtements →</div>
-      </a>
-
-      <!-- Bloc 4 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="https://i.imgur.com/KPb3fQJ.png" alt="Sacs" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Sacs →</div>
-      </a>
-
-      <!-- Bloc 5 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="https://i.imgur.com/fxZ3ltT.png" alt="Parfums" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Parfums →</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-
