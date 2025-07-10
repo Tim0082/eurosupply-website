@@ -2,34 +2,61 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Mon Fournisseur</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EuroSupply</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="burger" id="burger">&#9776;</div>
-    <nav id="menu">
-      <a href="#">Accueil</a>
-      <a href="#">Catalogue</a>
-      <a href="#">Contact</a>
+<body class="bg-black text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="p-6 flex justify-between items-center">
+    <h1 class="text-3xl font-bold">EuroSupply</h1>
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:underline">À propos</a></li>
+        <li><a href="#services" class="hover:underline">Services</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
     </nav>
-    <div class="actions">
-      <img src="images/recherche.png" alt="Rechercher" class="icon" />
-      <img src="images/panier.png" alt="Panier" class="icon" />
-    </div>
   </header>
 
-  <main>
-    <h1>Bienvenue</h1>
-    <ul class="categories">
-      <li>Produits Tech <span>➔</span></li>
-      <li>Téléphone <span>➔</span></li>
-      <li>Vêtements <span>➔</span></li>
-      <li>Sac <span>➔</span></li>
-      <li>Parfum <span>➔</span></li>
-    </ul>
-  </main>
+  <!-- HERO -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <h2 class="text-5xl md:text-7xl font-extrabold mb-4">Bienvenue chez EuroSupply</h2>
+    <p class="text-lg md:text-xl text-gray-300">La référence en fourniture européenne</p>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- ABOUT -->
+  <section id="about" class="py-20 px-6 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">À propos</h3>
+      <p class="text-gray-300">EuroSupply vous propose des produits de qualité au meilleur prix, avec un service client à l’écoute.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-20 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <div class="p-6 bg-gray-800 rounded-xl shadow-md hover:scale-105 transform transition">
+        <h4 class="text-xl font-semibold mb-2">Livraison Rapide</h4>
+        <p class="text-gray-400">Partout en Europe en 48h chrono.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-xl shadow-md hover:scale-105 transform transition">
+        <h4 class="text-xl font-semibold mb-2">Qualité Garantie</h4>
+        <p class="text-gray-400">Des produits testés et approuvés.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-xl shadow-md hover:scale-105 transform transition">
+        <h4 class="text-xl font-semibold mb-2">Support 24/7</h4>
+        <p class="text-gray-400">Une équipe dispo pour t’aider bb ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-gray-500 bg-gray-950">
+    &copy; 2025 EuroSupply. Tous droits réservés.
+  </footer>
+
 </body>
 </html>
