@@ -2,99 +2,118 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <title>Accueil - SunWave</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EuroSupply</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0f2c;
+      color: #ffffff;
+    }
+
+    .logo-floating {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 200px;
+      height: auto;
+      z-index: 10;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro-section {
+      background-color: #061943;
+      padding: 60px 30px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+      margin: 60px auto;
+    }
+
+    .intro-section h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #1e90ff;
+    }
+
+    .intro-section .highlight {
+      background: linear-gradient(90deg, #1e90ff, #00c3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .intro-section p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #ffffffcc;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #1e90ff;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #00bfff;
+    }
+  </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body>
 
-  <!-- HEADER -->
-  <header class="p-6 flex justify-between items-center">
-    <h1 class="text-3xl font-bold">EuroSupply</h1>
-    <nav>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:underline">À propos</a></li>
-        <li><a href="#services" class="hover:underline">Services</a></li>
-        <li><a href="#collections" class="hover:underline">Collections</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Header chargé dynamiquement -->
+  <div id="include-header"></div>
 
-  <!-- HERO -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
-    <h2 class="text-5xl md:text-7xl font-extrabold mb-4">Bienvenue chez EuroSupply</h2>
-    <p class="text-lg md:text-xl text-gray-300">La référence en fourniture européenne</p>
-  </section>
+  <main>
+    <section class="intro-section">
+      <h1>🌊 Bienvenue sur <span class="highlight">SunWave RP</span></h1>
+      <p>
+        SunWave, c’est le nouveau souffle du GTA RP français.<br>
+        Un serveur flambant neuf, récemment ouvert <strong>les joueurs sont actifs</strong> en continu ! 🔥
+      </p>
+      <p>
+        Ici, plonge dans une expérience <strong>RP 100% réaliste</strong> avec une économie <strong>semi-réaliste</strong> pensée pour durer.
+        Que tu sois flic, entrepreneur, voyou ou simple citoyen, chaque choix façonne ton histoire.
+      </p>
+      <p>
+        Rejoins une communauté active, ambitieuse et encadrée par une équipe à l’écoute.<br>
+        <strong>Ton aventure commence maintenant.</strong>
+      </p>
+      <a href="https://discord.gg/sunwave" class="cta-button" target="_blank">🚀 Rejoindre l’aventure</a>
+    </section>
+  </main>
 
-  <!-- SLOGAN -->
-  <section class="text-center py-12 px-4 bg-gray-900">
-    <h1 class="text-4xl font-bold mb-4">La référence en fourniture européenne</h1>
-    <p class="text-gray-400">Découvrez nos collections premium</p>
-  </section>
+  <!-- Footer chargé dynamiquement -->
+  <div id="include-footer"></div>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-20 px-6 bg-gray-900">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">À propos</h3>
-      <p class="text-gray-300">EuroSupply vous propose des produits de qualité au meilleur prix, avec un service client à l’écoute.</p>
-    </div>
-  </section>
+  <script>
+    // Include header
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-header").innerHTML = data;
+      });
 
-  <!-- SERVICES -->
-  <section id="services" class="py-20 px-6">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-      <div class="p-6 bg-gray-800 rounded-xl shadow-md hover:scale-105 transform transition">
-        <h4 class="text-xl font-semibold mb-2">Livraison Rapide</h4>
-        <p class="text-gray-400">Partout en Europe en 48h chrono.</p>
-      </div>
-      <div class="p-6 bg-gray-800 rounded-xl shadow-md hover:scale-105 transform transition">
-        <h4 class="text-xl font-semibold mb-2">Qualité Garantie</h4>
-        <p class="text-gray-400">Des produits testés et approuvés.</p>
-      </div>
-      <div class="p-6 bg-gray-800 rounded-xl shadow-md hover:scale-105 transform transition">
-        <h4 class="text-xl font-semibold mb-2">Support 24/7</h4>
-        <p class="text-gray-400">Une équipe dispo pour t’aider bb ❤️</p>
-      </div>
-    </div>
-  </section>
-<!-- COLLECTIONS -->
-<section class="bg-purple-700 py-16 px-6">
-  <div class="max-w-6xl mx-auto text-white">
-    <h3 class="text-4xl font-bold mb-12">Collections</h3>
+    // Include footer
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-footer").innerHTML = data;
+      });
+  </script>
 
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-      <!-- Bloc 1 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="img/produits_tech.png" alt="Produits Tech" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Produits Tech →</div>
-      </a>
-
-      <!-- Bloc 2 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="img/telephones.png" alt="Téléphones" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Téléphones →</div>
-      </a>
-
-      <!-- Bloc 3 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="img/vetements.png" alt="Vêtements" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Vêtements →</div>
-      </a>
-
-      <!-- Bloc 4 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="img/sacs.png" alt="Sacs" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Sacs →</div>
-      </a>
-
-      <!-- Bloc 5 -->
-      <a href="#" class="bg-black rounded-lg overflow-hidden shadow-lg hover:scale-105 transition transform">
-        <img src="img/parfums.png" alt="Parfums" class="w-full h-48 object-contain bg-black p-4">
-        <div class="p-4 text-center text-white font-medium">Parfums →</div>
-      </a>
-    </div>
-  </div>
-</section>
-
+</body>
+</html>
